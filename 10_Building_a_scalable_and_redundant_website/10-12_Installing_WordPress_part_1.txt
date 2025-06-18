@@ -1,0 +1,8 @@
+wget https://wordpress.org/wordpress-6.7.1.tar.gz
+ls -lh
+tar -zxvf wordpress-6.7.1.tar.gz
+ls
+ls  -lh wordpress
+cp -r wordpress/* /var/www/html/
+ls -lh /var/www/html/
+rm wordpress-6.7.1.tar.gz

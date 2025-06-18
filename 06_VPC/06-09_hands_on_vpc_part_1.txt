@@ -1,0 +1,1 @@
+ping -c 10 {Private IPv4 address of "my-asia-instance-2"}

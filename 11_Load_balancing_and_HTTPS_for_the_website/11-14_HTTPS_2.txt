@@ -1,0 +1,13 @@
+pwd
+vim wp-config.php
+
+// vim画面で以下を入力（スラッシュで検索）
+/Add any custom
+
+// 以下を追加
+$_SERVER['HTTPS'] = 'on';
+define('FORCE_SSL_LOGIN', true);
+define('FORCE_SSL_ADMIN', true);
+
+// vim画面で以下を入力（保存して終了）
+:wq

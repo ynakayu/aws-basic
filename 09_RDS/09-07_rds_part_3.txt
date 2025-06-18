@@ -1,0 +1,4 @@
+sudo dnf update -y
+sudo dnf install -y mariadb105
+mysql --version
+mysql -h {コピーしたエンドポイント} -P 3306 -u admin -p

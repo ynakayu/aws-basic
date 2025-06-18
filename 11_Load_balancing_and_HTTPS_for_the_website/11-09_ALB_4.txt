@@ -1,0 +1,19 @@
+// 手順1：RDSのMySQLに接続
+mysql -h {RDS MySQLのエンドポイント} -P 3306 -u wp-user -p
+
+// 手順2：wordpressデータベースを使用
+USE wordpress;
+
+// 手順3：現状のサイトURLの設定を確認
+SELECT * FROM wp_options WHERE option_name IN ('home','siteurl');
+
+// 手順4：新しいドメイン名で置き換え
+UPDATE wp_options SET option_value = 'http://{各自で設定したドメイン名}' where option_name IN ('home','siteurl');
+
+// 手順5：再確認
+SELECT * FROM wp_options WHERE option_name IN ('home','siteurl');
+
+// 手順6：投稿内容などに含まれる古いURLも変更
+UPDATE wp_posts SET guid = REPLACE(guid, 'http://<old-ip-address>', 'http://{各自で設定したドメイン名}');
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://<old-ip-address>', 'http://{各自で設定したドメイン名}');
+UPDATE wp_postmeta SET meta_value = REPLACE(meta_value, 'http://<old-ip-address>', 'http://{各自で設定したドメイン名}');

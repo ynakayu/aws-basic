@@ -1,0 +1,9 @@
+SHOW DATABASES;
+CREATE DATABASE mydb;
+USE mydb;
+CREATE TABLE fruit (type VARCHAR(20) NOT NULL PRIMARY KEY, variety VARCHAR(20), price INT);
+SHOW TABLES;
+DESCRIBE fruit;
+INSERT INTO fruit VALUES ('Apple', 'Fuji', '200'), ('Kiwifruit', 'Green', '350'), ('Strawberry', 'Tochiotome', '400'), ('Orange', 'Valencia', '250');
+SELECT * FROM fruit;
+SELECT * FROM fruit WHERE price >=300;

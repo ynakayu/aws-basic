@@ -1,0 +1,10 @@
+dnf info httpd
+sudo dnf install -y httpd
+httpd -v
+sudo dnf install -y wget php8.4-fpm php8.4-mysqlnd php8.4 php8.4-devel
+php -v
+dnf list installed php*
+sudo systemctl start httpd
+sudo systemctl status httpd
+sudo systemctl enable httpd
+sudo systemctl is-enabled httpd

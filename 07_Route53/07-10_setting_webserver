@@ -1,0 +1,10 @@
+sudo dnf update -y
+dnf info httpd
+sudo dnf install -y httpd
+httpd -v
+sudo systemctl start httpd 
+sudo systemctl status httpd
+sudo systemctl enable httpd
+sudo systemctl is-enabled httpd
+sudo sh -c "echo 'Hello AWS' >> /var/www/html/index.html"
+cat /var/www/html/index.html

@@ -1,0 +1,2 @@
+mv /var/www/html/wp-config.php wp-config.php.bk
+ls -lh

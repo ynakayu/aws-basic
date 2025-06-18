@@ -1,0 +1,7 @@
+dnf info httpd
+sudo dnf install -y httpd
+httpd -v
+sudo systemctl start httpd
+sudo systemctl status httpd
+sudo systemctl enable httpd
+sudo systemctl is-enabled httpd

@@ -1,0 +1,14 @@
+mysqldump -u root -p wordpress > export.sql
+ls -lh
+head export.sql
+mysql -h {コピーしたエンドポイント} -P 3306 -u admin -p
+CREATE DATABASE wordpress;
+exit
+mysql -h {コピーしたエンドポイント} -P 3306 -u admin -p wordpress < export.sql
+mysql -h {コピーしたエンドポイント} -P 3306 -u admin -p
+SHOW DATABASES;
+USE wordpress;
+SHOW TABLES;
+exit
+sudo systemctl stop mysqld
+sudo systemctl disable mysqld

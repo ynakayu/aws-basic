@@ -1,0 +1,11 @@
+date
+ls
+ls -a
+mkdir test
+ls
+cd test
+touch test.txt
+ls
+cd ..
+rm -r test
+ls

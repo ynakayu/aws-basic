@@ -1,0 +1,2 @@
+sudo sh -c "echo 'Hello AWS' >> /var/www/html/index.html"
+cat /var/www/html/index.html

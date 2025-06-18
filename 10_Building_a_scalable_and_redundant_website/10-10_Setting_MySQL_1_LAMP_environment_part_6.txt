@@ -1,0 +1,5 @@
+sudo systemctl start mysqld
+sudo systemctl status mysqld
+sudo systemctl enable mysqld
+sudo cat /var/log/mysqld.log | grep 'password'
+sudo mysql_secure_installation
